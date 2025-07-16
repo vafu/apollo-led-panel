@@ -1,3 +1,5 @@
+SETUP_WEBREPL = False
+
 # Wi-Fi credentials
 WIFI_SSID = "YOUR_WIFI"
 WIFI_PASSWORD = "YOUR_PASSWORD"

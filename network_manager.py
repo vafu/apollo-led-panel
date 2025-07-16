@@ -2,8 +2,8 @@
 
 import network
 import asyncio
+import config
 from status import NetworkState
-import webrepl
 
 
 class NetworkManager:
@@ -30,6 +30,8 @@ class NetworkManager:
                 self._status.network = NetworkState.CONNECTED
                 print(f"Network State IP: {
                     self._wlan.ifconfig()[0]}")
-                webrepl.start()
+                if config.SETUP_WEBREPL:
+                    import webrepl
+                    webrepl.start()
 
             await asyncio.sleep(5)
