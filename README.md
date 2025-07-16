@@ -2,7 +2,7 @@
 
 A MicroPython project to display "now playing" information and album art on a Pimoroni Interstate75-driven HUB75 RGB LED panel.
 
-[!image demo](.misc/led_demo.jpg)
+![led_demo](https://github.com/user-attachments/assets/0d54fbac-706c-4b87-9984-9b9469b59ab1)
 
 ---
 ## Overview
