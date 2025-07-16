@@ -2,7 +2,7 @@
 
 A MicroPython project to display "now playing" information and album art on a Pimoroni Interstate75-driven HUB75 RGB LED panel.
 
-[!image demo](.misc/led_demo.jpg)
+![led_demo](https://github.com/user-attachments/assets/0d54fbac-706c-4b87-9984-9b9469b59ab1)
 
 ---
 ## Overview
@@ -18,7 +18,7 @@ The UI is designed to be dynamic, with configurable overlays that automatically 
 
 * **Controller Board:** Pimoroni Interstate 75 or 75W.
 * **LED Panel:** A 128x128 (or other supported size) HUB75-compatible RGB LED matrix panel.
-* **Power Supply:** A 5V power supply capable of providing sufficient current for your LED panel (e.g., 5V 10A).
+* **Power Supply:** A 5V power supply capable of providing sufficient current for your LED panel.
 * **Cabling:** A USB-C cable for programming and the necessary ribbon cable to connect the driver board to the panel.
 
 ---
@@ -37,11 +37,13 @@ Your board requires the custom Pimoroni MicroPython firmware, which includes the
 2.  Put your board into "bootsel" mode by holding the `BOOTSEL` button while plugging it into your computer via USB. It will appear as a USB drive.
 3.  Drag and drop the downloaded `.uf2` file onto the drive. The board will automatically reboot with MicroPython installed.
 
-#### 2. Install Libraries
+#### 2. Upload the code
 
-The `Pimoroni` firmware already includes the `interstate75`, `picographics`, `jpegdec`, and `urequests` libraries, so no additional installation is needed.
+Either use Thonny or `mpremote` to upload all code files to the board. 
+`mpremote fs cp * : && mpremote run main.py`
 
----
+If you want webrepl -- make sure you've configured webrepl before by accessing REPL via usb and doing `import webrepl_setup`
+
 ## Configuration
 
 Edit the `config.py` file on the board to match your local setup.
